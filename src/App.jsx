@@ -23,6 +23,7 @@ const BC = {
   "50嵐":    { bg: "#E8F0E4", fg: "#3D6B35", badge: "#4A7D42" },
   "清心福全": { bg: "#FDEAE6", fg: "#A63D2E", badge: "#C24B39" },
   "迷客夏":  { bg: "#E4EDE8", fg: "#2D6644", badge: "#3A7D55" },
+  "一沐日":  { bg: "#F5EDDE", fg: "#7A6422", badge: "#9E7C28" },
 }
 
 function DrinkCard({ drink, onSelect }) {
@@ -64,15 +65,22 @@ function DrinkCard({ drink, onSelect }) {
         display: "flex", justifyContent: "space-between", alignItems: "center",
         borderTop: `1px solid ${C.border}`, paddingTop: 12, marginTop: 4,
       }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-          <span style={{ fontSize: 12, color: C.muted }}>中</span>
-          <span style={{ fontSize: 22, fontWeight: 900, color: C.text, letterSpacing: -0.5 }}>${drink.priceM}</span>
-        </div>
-        <div style={{ width: 1, height: 18, background: C.border }} />
-        <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-          <span style={{ fontSize: 12, color: C.muted }}>大</span>
-          <span style={{ fontSize: 22, fontWeight: 900, color: C.text, letterSpacing: -0.5 }}>${drink.priceL}</span>
-        </div>
+        {drink.priceM != null ? (<>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
+            <span style={{ fontSize: 12, color: C.muted }}>中</span>
+            <span style={{ fontSize: 22, fontWeight: 900, color: C.text, letterSpacing: -0.5 }}>${drink.priceM}</span>
+          </div>
+          <div style={{ width: 1, height: 18, background: C.border }} />
+          <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
+            <span style={{ fontSize: 12, color: C.muted }}>大</span>
+            <span style={{ fontSize: 22, fontWeight: 900, color: C.text, letterSpacing: -0.5 }}>${drink.priceL}</span>
+          </div>
+        </>) : (
+          <div style={{ display: "flex", alignItems: "baseline", gap: 4, margin: "0 auto" }}>
+            <span style={{ fontSize: 12, color: C.muted }}>單一價</span>
+            <span style={{ fontSize: 22, fontWeight: 900, color: C.text, letterSpacing: -0.5 }}>${drink.priceL}</span>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -120,6 +128,7 @@ function DrinkModal({ drink, onClose }) {
         )}
         <div style={{ background: C.card, borderRadius: 14, padding: 18, marginBottom: 20, border: `1px solid ${C.border}` }}>
           <div style={{ fontSize: 14, fontWeight: 700, color: C.text, marginBottom: 12 }}>選擇杯型</div>
+          {drink.priceM != null ? (
           <div style={{ display: "flex", gap: 10 }}>
             {[{ l: "中杯 M", p: drink.priceM, k: "M" }, { l: "大杯 L", p: drink.priceL, k: "L" }].map(s => (
               <button key={s.k} onClick={() => setSz(s.k)} style={{
@@ -133,6 +142,12 @@ function DrinkModal({ drink, onClose }) {
               </button>
             ))}
           </div>
+          ) : (
+          <div style={{ textAlign: "center", padding: "14px 12px", background: bc.bg, borderRadius: 12, border: `2px solid ${bc.badge}` }}>
+            <div style={{ fontSize: 14, fontWeight: 700, color: bc.fg }}>單一杯型</div>
+            <div style={{ fontSize: 26, fontWeight: 900, marginTop: 4, color: C.text }}>${drink.priceL}</div>
+          </div>
+          )}
         </div>
         <div style={{ marginBottom: 18 }}>
           <div style={{ fontSize: 14, fontWeight: 700, color: C.text, marginBottom: 10 }}>甜度</div>
@@ -148,9 +163,9 @@ function DrinkModal({ drink, onClose }) {
         </div>
         <div style={{ background: C.text, color: "#fff", borderRadius: 14, padding: "20px 18px", textAlign: "center" }}>
           <div style={{ fontSize: 13, opacity: 0.7, marginBottom: 6 }}>您的選擇</div>
-          <div style={{ fontSize: 19, fontWeight: 800, lineHeight: 1.3 }}>{drink.name}（{sz === "M" ? "中杯" : "大杯"}）</div>
+          <div style={{ fontSize: 19, fontWeight: 800, lineHeight: 1.3 }}>{drink.name}{drink.priceM != null ? `（${sz === "M" ? "中杯" : "大杯"}）` : ""}</div>
           <div style={{ fontSize: 14, marginTop: 6, opacity: 0.8 }}>{sw} ・ {ic}</div>
-          <div style={{ fontSize: 32, fontWeight: 900, marginTop: 10 }}>${sz === "M" ? drink.priceM : drink.priceL}</div>
+          <div style={{ fontSize: 32, fontWeight: 900, marginTop: 10 }}>${drink.priceM != null ? (sz === "M" ? drink.priceM : drink.priceL) : drink.priceL}</div>
         </div>
       </div>
     </div>
@@ -177,8 +192,8 @@ export default function App() {
         (d.desc && d.desc.toLowerCase().includes(q))
       )
     }
-    if (sortBy === "priceAsc") r = [...r].sort((a, b) => a.priceM - b.priceM)
-    if (sortBy === "priceDesc") r = [...r].sort((a, b) => b.priceM - a.priceM)
+    if (sortBy === "priceAsc") r = [...r].sort((a, b) => (a.priceM ?? a.priceL) - (b.priceM ?? b.priceL))
+    if (sortBy === "priceDesc") r = [...r].sort((a, b) => (b.priceM ?? b.priceL) - (a.priceM ?? a.priceL))
     if (sortBy === "hot") r = [...r].sort((a, b) => (b.hot ? 1 : 0) - (a.hot ? 1 : 0))
     return r
   }, [search, brandFilter, categoryFilter, sortBy])
@@ -186,10 +201,10 @@ export default function App() {
   const stats = useMemo(() => {
     const m = {}
     DRINKS.forEach(d => {
-      if (!m[d.brand]) m[d.brand] = { count: 0, totalM: 0, minM: Infinity, maxM: 0 }
-      m[d.brand].count++; m[d.brand].totalM += d.priceM
-      m[d.brand].minM = Math.min(m[d.brand].minM, d.priceM)
-      m[d.brand].maxM = Math.max(m[d.brand].maxM, d.priceM)
+      if (!m[d.brand]) m[d.brand] = { count: 0, totalL: 0, minL: Infinity, maxL: 0 }
+      m[d.brand].count++; m[d.brand].totalL += d.priceL
+      m[d.brand].minL = Math.min(m[d.brand].minL, d.priceL)
+      m[d.brand].maxL = Math.max(m[d.brand].maxL, d.priceL)
     })
     return m
   }, [])
@@ -215,7 +230,7 @@ export default function App() {
         <div style={{ position: "relative", zIndex: 1 }}>
           <div style={{ fontSize: 13, color: "rgba(255,255,255,.45)", fontWeight: 500, letterSpacing: 4, marginBottom: 8 }}>KAOHSIUNG DRINKS</div>
           <h1 style={{ fontSize: 26, fontWeight: 900, color: "#fff", margin: "0 0 8px", letterSpacing: 2 }}>高雄飲料即時查</h1>
-          <p style={{ color: "rgba(255,255,255,.5)", fontSize: 13, fontWeight: 500 }}>50嵐 ・ 清心福全 ・ 迷客夏 ｜ {DRINKS.length} 款飲品</p>
+          <p style={{ color: "rgba(255,255,255,.5)", fontSize: 13, fontWeight: 500 }}>50嵐 ・ 清心福全 ・ 迷客夏 ・ 一沐日 ｜ {DRINKS.length} 款飲品</p>
         </div>
       </div>
 
@@ -323,9 +338,9 @@ export default function App() {
                       </div>
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, textAlign: "center" }}>
                         {[
-                          { label: "中杯均價", val: `$${Math.round(s.totalM / s.count)}`, color: bcc.fg },
-                          { label: "最低價", val: `$${s.minM}`, color: C.green },
-                          { label: "最高價", val: `$${s.maxM}`, color: C.red },
+                          { label: "大杯均價", val: `$${Math.round(s.totalL / s.count)}`, color: bcc.fg },
+                          { label: "最低價", val: `$${s.minL}`, color: C.green },
+                          { label: "最高價", val: `$${s.maxL}`, color: C.red },
                         ].map(item => (
                           <div key={item.label} style={{ background: "rgba(255,255,255,.7)", borderRadius: 10, padding: "10px 6px" }}>
                             <div style={{ fontSize: 11, color: C.sub, marginBottom: 4 }}>{item.label}</div>
