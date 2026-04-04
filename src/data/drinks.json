@@ -7,7 +7,8 @@
     "迷客夏": { "color": "#2E7D32", "accent": "#81C784", "logo": "🐄", "tagline": "綠光牧場 職人手作", "founded": 2006, "note": "使用自家綠光牧場鮮奶" },
     "一沐日": { "color": "#B8860B", "accent": "#DAA520", "logo": "🍂", "tagline": "全台首創粉粿入茶", "founded": 2018, "note": "加料：草仔粿/招牌粉粿$15、琥珀粉圓/蘆薈/嫩仙草$10、雙粉$15" },
     "大茗": { "color": "#5D4037", "accent": "#8D6E63", "logo": "🫖", "tagline": "本位製茶堂 Since 1994", "founded": 1994, "note": "南部菜單，加料：珍珠/仙草+$10、蕎麥凍+$15、酪梨奶蓋+$30、咖啡粉粿+$15" },
-    "麻古茶坊": { "color": "#880E4F", "accent": "#E91E63", "logo": "🍓", "tagline": "果粒茶創始品牌", "founded": 2014, "note": "買5送1，攜麻古美口瓶回購任一飲品現折$10。加料+$10/$20" }
+    "麻古茶坊": { "color": "#880E4F", "accent": "#E91E63", "logo": "🍓", "tagline": "果粒茶創始品牌", "founded": 2014, "note": "買5送1，攜麻古美口瓶回購任一飲品現折$10。加料+$10/$20" },
+    "青山": { "color": "#4A6741", "accent": "#7CB342", "logo": "⛰️", "tagline": "四季青茶 海拔風味", "founded": null, "note": "加料：琥珀珍珠$10、蕎麥珍珠$15、海鹽/蕎麥奶蓋$20、菜燕/茶凍/婚貴/杏仁凍$10。那堤可升級燕麥奶M+10/L+15" }
   },
   "drinks": [
     { "brand": "50嵐", "name": "茉莉綠茶", "category": "純茶", "priceM": 25, "priceL": 30, "hot": true, "tags": ["經典"] },
@@ -198,6 +199,55 @@
     { "brand": "麻古茶坊", "name": "波霸奶茶", "category": "奶茶", "priceM": null, "priceL": 50, "hot": true, "tags": ["濃醇系列"] },
     { "brand": "麻古茶坊", "name": "仙草凍奶茶", "category": "奶茶", "priceM": null, "priceL": 50, "hot": false, "tags": ["濃醇系列"] },
     { "brand": "麻古茶坊", "name": "奶茶Q", "category": "奶茶", "priceM": null, "priceL": 60, "hot": false, "tags": ["濃醇系列"], "desc": "仙草凍奶茶" },
-    { "brand": "麻古茶坊", "name": "阿華田", "category": "奶茶", "priceM": null, "priceL": 60, "hot": false, "tags": ["濃醇系列"] }
+    { "brand": "麻古茶坊", "name": "阿華田", "category": "奶茶", "priceM": null, "priceL": 60, "hot": false, "tags": ["濃醇系列"] },
+
+    { "brand": "青山", "name": "春青", "category": "純茶", "priceM": 30, "priceL": 35, "hot": false, "tags": ["四季青茶"], "desc": "花香、口感輕、海拔800-1200M" },
+    { "brand": "青山", "name": "夏青", "category": "純茶", "priceM": 30, "priceL": 35, "hot": false, "tags": ["四季青茶"], "desc": "木質香、口感重、海拔800-1200M" },
+    { "brand": "青山", "name": "秋青", "category": "純茶", "priceM": 40, "priceL": 45, "hot": false, "tags": ["四季青茶"], "desc": "奶香、口感中、海拔1200-1500M" },
+    { "brand": "青山", "name": "冬青", "category": "純茶", "priceM": 55, "priceL": 60, "hot": true, "tags": ["四季青茶", "推薦"], "desc": "清香、口感輕、海拔1300-1600M" },
+    { "brand": "青山", "name": "綠水", "category": "純茶", "priceM": 25, "priceL": 30, "hot": false, "tags": ["茶"] },
+    { "brand": "青山", "name": "天蟬紅茶", "category": "純茶", "priceM": 35, "priceL": 40, "hot": true, "tags": ["茶", "推薦"] },
+
+    { "brand": "青山", "name": "東方菊花茶", "category": "純茶", "priceM": 45, "priceL": 55, "hot": true, "tags": ["無咖啡因", "推薦"] },
+    { "brand": "青山", "name": "西穀蕎麥茶", "category": "純茶", "priceM": 30, "priceL": 40, "hot": true, "tags": ["無咖啡因", "推薦"] },
+    { "brand": "青山", "name": "南非國寶茶", "category": "純茶", "priceM": 40, "priceL": 50, "hot": true, "tags": ["無咖啡因", "推薦"] },
+    { "brand": "青山", "name": "北風桂花玄米茶", "category": "純茶", "priceM": 35, "priceL": 45, "hot": true, "tags": ["無咖啡因", "推薦"] },
+
+    { "brand": "青山", "name": "青山綠水", "category": "特調", "priceM": 35, "priceL": 40, "hot": true, "tags": ["調", "推薦"] },
+    { "brand": "青山", "name": "春青菊花", "category": "特調", "priceM": 45, "priceL": 55, "hot": false, "tags": ["調"] },
+    { "brand": "青山", "name": "蕎麥冬露", "category": "特調", "priceM": null, "priceL": 50, "hot": true, "tags": ["調", "推薦"], "desc": "冬露最低糖量為半糖" },
+    { "brand": "青山", "name": "春青冬露", "category": "特調", "priceM": null, "priceL": 50, "hot": false, "tags": ["調"], "desc": "冬露最低糖量為半糖" },
+    { "brand": "青山", "name": "菊花冬露", "category": "特調", "priceM": null, "priceL": 55, "hot": true, "tags": ["調", "推薦"], "desc": "冬露最低糖量為半糖" },
+    { "brand": "青山", "name": "多多綠水", "category": "特調", "priceM": null, "priceL": 55, "hot": false, "tags": ["調"] },
+
+    { "brand": "青山", "name": "菜燕春青", "category": "特調", "priceM": 40, "priceL": 45, "hot": true, "tags": ["料", "推薦"] },
+    { "brand": "青山", "name": "菜燕奶茶", "category": "奶茶", "priceM": 55, "priceL": 60, "hot": true, "tags": ["料", "推薦"] },
+    { "brand": "青山", "name": "杏仁凍春青", "category": "特調", "priceM": 40, "priceL": 45, "hot": false, "tags": ["料"] },
+    { "brand": "青山", "name": "青茶婚貴奶茶", "category": "奶茶", "priceM": 55, "priceL": 60, "hot": false, "tags": ["料"] },
+    { "brand": "青山", "name": "琥珀珍珠奶茶", "category": "奶茶", "priceM": 55, "priceL": 60, "hot": true, "tags": ["料", "推薦"] },
+    { "brand": "青山", "name": "蕎麥珍珠奶茶", "category": "奶茶", "priceM": 60, "priceL": 65, "hot": false, "tags": ["料"] },
+    { "brand": "青山", "name": "青茶凍天蟬那堤", "category": "鮮奶", "priceM": 65, "priceL": 75, "hot": false, "tags": ["料"] },
+    { "brand": "青山", "name": "琥珀珍珠天蟬那堤", "category": "鮮奶", "priceM": 65, "priceL": 75, "hot": false, "tags": ["料"] },
+    { "brand": "青山", "name": "蕎麥珍珠夏青那堤", "category": "鮮奶", "priceM": 65, "priceL": 75, "hot": true, "tags": ["料", "推薦"] },
+
+    { "brand": "青山", "name": "蕎麥奶蓋綠水", "category": "特調", "priceM": 45, "priceL": 50, "hot": false, "tags": ["奶蓋"], "desc": "法國Elle&Vire鮮奶油特調，僅供少冰" },
+    { "brand": "青山", "name": "蕎麥奶蓋玄米茶", "category": "特調", "priceM": 55, "priceL": 65, "hot": true, "tags": ["奶蓋", "推薦"], "desc": "法國Elle&Vire鮮奶油特調" },
+    { "brand": "青山", "name": "海鹽奶蓋春青", "category": "特調", "priceM": 50, "priceL": 55, "hot": true, "tags": ["奶蓋", "推薦"], "desc": "法國Elle&Vire鮮奶油特調" },
+    { "brand": "青山", "name": "海鹽奶蓋紅茶", "category": "特調", "priceM": 55, "priceL": 60, "hot": true, "tags": ["奶蓋", "推薦"] },
+    { "brand": "青山", "name": "海鹽奶蓋輕蘋香茶", "category": "特調", "priceM": 80, "priceL": null, "hot": true, "tags": ["奶蓋", "推薦"], "desc": "僅供M杯" },
+
+    { "brand": "青山", "name": "山峰奶茶", "category": "奶茶", "priceM": 45, "priceL": 50, "hot": false, "tags": ["那堤系列"], "desc": "可升級燕麥奶M+10/L+15" },
+    { "brand": "青山", "name": "夏青那堤", "category": "鮮奶", "priceM": 50, "priceL": 60, "hot": true, "tags": ["那堤系列", "推薦"] },
+    { "brand": "青山", "name": "蕎麥那堤", "category": "鮮奶", "priceM": 50, "priceL": 65, "hot": true, "tags": ["那堤系列", "推薦"] },
+    { "brand": "青山", "name": "天蟬那堤", "category": "鮮奶", "priceM": 55, "priceL": 65, "hot": true, "tags": ["那堤系列", "推薦"] },
+
+    { "brand": "青山", "name": "白甘蔗春青", "category": "水果茶", "priceM": 55, "priceL": 60, "hot": true, "tags": ["果", "推薦"], "desc": "不提供無糖" },
+    { "brand": "青山", "name": "香檸綠水", "category": "水果茶", "priceM": 55, "priceL": 60, "hot": false, "tags": ["果"], "desc": "不提供無糖" },
+    { "brand": "青山", "name": "柳丁綠水", "category": "水果茶", "priceM": 65, "priceL": 70, "hot": false, "tags": ["果"] },
+    { "brand": "青山", "name": "紅柚綠水", "category": "水果茶", "priceM": 65, "priceL": 70, "hot": true, "tags": ["果", "推薦"] },
+    { "brand": "青山", "name": "橘子春青", "category": "水果茶", "priceM": 65, "priceL": 70, "hot": true, "tags": ["果", "推薦"] },
+    { "brand": "青山", "name": "荔枝春青", "category": "水果茶", "priceM": 70, "priceL": 75, "hot": true, "tags": ["果", "推薦"], "desc": "含青茶凍" },
+    { "brand": "青山", "name": "水梨春青", "category": "水果茶", "priceM": 70, "priceL": 75, "hot": true, "tags": ["果", "推薦"] },
+    { "brand": "青山", "name": "輕蘋香茶", "category": "水果茶", "priceM": 75, "priceL": 80, "hot": true, "tags": ["果", "推薦"] }
   ]
 }
