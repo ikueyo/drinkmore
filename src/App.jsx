@@ -24,6 +24,8 @@ const BC = {
   "清心福全": { bg: "#FDEAE6", fg: "#A63D2E", badge: "#C24B39" },
   "迷客夏":  { bg: "#E4EDE8", fg: "#2D6644", badge: "#3A7D55" },
   "一沐日":  { bg: "#F5EDDE", fg: "#7A6422", badge: "#9E7C28" },
+  "大茗":    { bg: "#EFEBE7", fg: "#4E342E", badge: "#6D4C41" },
+  "麻古茶坊": { bg: "#FCE4EC", fg: "#880E4F", badge: "#AD1457" },
 }
 
 function DrinkCard({ drink, onSelect }) {
@@ -230,7 +232,7 @@ export default function App() {
         <div style={{ position: "relative", zIndex: 1 }}>
           <div style={{ fontSize: 13, color: "rgba(255,255,255,.45)", fontWeight: 500, letterSpacing: 4, marginBottom: 8 }}>KAOHSIUNG DRINKS</div>
           <h1 style={{ fontSize: 26, fontWeight: 900, color: "#fff", margin: "0 0 8px", letterSpacing: 2 }}>高雄飲料即時查</h1>
-          <p style={{ color: "rgba(255,255,255,.5)", fontSize: 13, fontWeight: 500 }}>50嵐 ・ 清心福全 ・ 迷客夏 ・ 一沐日 ｜ {DRINKS.length} 款飲品</p>
+          <p style={{ color: "rgba(255,255,255,.5)", fontSize: 13, fontWeight: 500 }}>50嵐・清心福全・迷客夏・一沐日・大茗・麻古 ｜ {DRINKS.length} 款飲品</p>
         </div>
       </div>
 
