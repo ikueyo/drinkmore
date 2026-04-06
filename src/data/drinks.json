@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04",
+  "lastUpdated": "2026-04-06",
   "region": "高屏區（南部菜單）",
   "brands": {
     "50嵐": { "color": "#1B6B3A", "accent": "#FFD700", "logo": "🍵", "tagline": "經典手搖 穩定品質", "founded": 1994, "note": "高屏區45元以上免費加一份料" },
@@ -8,7 +8,8 @@
     "一沐日": { "color": "#B8860B", "accent": "#DAA520", "logo": "🍂", "tagline": "全台首創粉粿入茶", "founded": 2018, "note": "加料：草仔粿/招牌粉粿$15、琥珀粉圓/蘆薈/嫩仙草$10、雙粉$15" },
     "大茗": { "color": "#5D4037", "accent": "#8D6E63", "logo": "🫖", "tagline": "本位製茶堂 Since 1994", "founded": 1994, "note": "南部菜單，加料：珍珠/仙草+$10、蕎麥凍+$15、酪梨奶蓋+$30、咖啡粉粿+$15" },
     "麻古茶坊": { "color": "#880E4F", "accent": "#E91E63", "logo": "🍓", "tagline": "果粒茶創始品牌", "founded": 2014, "note": "買5送1，攜麻古美口瓶回購任一飲品現折$10。加料+$10/$20" },
-    "青山": { "color": "#4A6741", "accent": "#7CB342", "logo": "⛰️", "tagline": "四季青茶 海拔風味", "founded": null, "note": "加料：琥珀珍珠$10、蕎麥珍珠$15、海鹽/蕎麥奶蓋$20、菜燕/茶凍/婚貴/杏仁凍$10。那堤可升級燕麥奶M+10/L+15" }
+    "青山": { "color": "#4A6741", "accent": "#7CB342", "logo": "⛰️", "tagline": "四季青茶 海拔風味", "founded": null, "note": "加料：琥珀珍珠$10、蕎麥珍珠$15、海鹽/蕎麥奶蓋$20、菜燕/茶凍/婚貴/杏仁凍$10。那堤可升級燕麥奶M+10/L+15" },
+    "樂台羽茶": { "color": "#37474F", "accent": "#78909C", "logo": "🍃", "tagline": "台灣茶職人精神", "founded": null, "note": "冷700ml/熱500ml。加料：珍珠+免費、仙草凍+$5、厚黑甜心凍+$10。60秒甘甘萃萃" }
   },
   "drinks": [
     { "brand": "50嵐", "name": "茉莉綠茶", "category": "純茶", "priceM": 25, "priceL": 30, "hot": true, "tags": ["經典"] },
@@ -248,6 +249,51 @@
     { "brand": "青山", "name": "橘子春青", "category": "水果茶", "priceM": 65, "priceL": 70, "hot": true, "tags": ["果", "推薦"] },
     { "brand": "青山", "name": "荔枝春青", "category": "水果茶", "priceM": 70, "priceL": 75, "hot": true, "tags": ["果", "推薦"], "desc": "含青茶凍" },
     { "brand": "青山", "name": "水梨春青", "category": "水果茶", "priceM": 70, "priceL": 75, "hot": true, "tags": ["果", "推薦"] },
-    { "brand": "青山", "name": "輕蘋香茶", "category": "水果茶", "priceM": 75, "priceL": 80, "hot": true, "tags": ["果", "推薦"] }
+    { "brand": "青山", "name": "輕蘋香茶", "category": "水果茶", "priceM": 75, "priceL": 80, "hot": true, "tags": ["果", "推薦"] },
+
+    { "brand": "樂台羽茶", "name": "蟲咬的紅茶", "category": "純茶", "priceM": 80, "priceL": 80, "hot": true, "tags": ["阿里山茗品", "推薦"], "desc": "一心二葉有機紅茶" },
+    { "brand": "樂台羽茶", "name": "阿里山青龍羽茶", "category": "純茶", "priceM": 80, "priceL": 80, "hot": true, "tags": ["阿里山茗品"], "desc": "手採茶，海拔1500公尺" },
+    { "brand": "樂台羽茶", "name": "日月潭台茶8號", "category": "純茶", "priceM": 30, "priceL": 30, "hot": true, "tags": ["日月潭紅茶", "推薦"], "desc": "花果香，全發酵" },
+    { "brand": "樂台羽茶", "name": "纖檸檬紅", "category": "水果茶", "priceM": null, "priceL": 50, "hot": false, "tags": ["日月潭紅茶"], "desc": "+檸檬" },
+    { "brand": "樂台羽茶", "name": "阿里山薑紅茶", "category": "特調", "priceM": null, "priceL": 50, "hot": false, "tags": ["日月潭紅茶"], "desc": "+老薑" },
+
+    { "brand": "樂台羽茶", "name": "紅韻醇拿鐵", "category": "鮮奶", "priceM": 60, "priceL": 60, "hot": true, "tags": ["牧白小農", "推薦"], "desc": "錫蘭+伯爵+鮮乳" },
+    { "brand": "樂台羽茶", "name": "米香醇拿鐵", "category": "鮮奶", "priceM": 65, "priceL": 65, "hot": true, "tags": ["牧白小農", "推薦"], "desc": "煎茶+糙米+鮮乳" },
+    { "brand": "樂台羽茶", "name": "紫米醇拿鐵", "category": "鮮奶", "priceM": 65, "priceL": 65, "hot": false, "tags": ["牧白小農"], "desc": "阿薩姆+紫米+鮮乳" },
+    { "brand": "樂台羽茶", "name": "蕎麥醇拿鐵", "category": "鮮奶", "priceM": 70, "priceL": 70, "hot": false, "tags": ["牧白小農"], "desc": "煎茶+蕎麥+鮮乳" },
+
+    { "brand": "樂台羽茶", "name": "不知春青茶", "category": "純茶", "priceM": 30, "priceL": 30, "hot": true, "tags": ["南投四季春"], "desc": "清香甘甜，輕發酵" },
+    { "brand": "樂台羽茶", "name": "希旺冰茶", "category": "水果茶", "priceM": null, "priceL": 65, "hot": false, "tags": ["南投四季春"], "desc": "+鳳梨+梅子" },
+
+    { "brand": "樂台羽茶", "name": "棗桂人纖凍飲", "category": "特調", "priceM": null, "priceL": 50, "hot": true, "tags": ["口感究好"], "desc": "阿薩姆+桂圓+紅棗+珊瑚草" },
+    { "brand": "樂台羽茶", "name": "仙草凍醇拿鐵", "category": "鮮奶", "priceM": null, "priceL": 65, "hot": false, "tags": ["口感究好"], "desc": "手作嫩仙草+鮮乳" },
+    { "brand": "樂台羽茶", "name": "蹦珠黑澗澗", "category": "鮮奶", "priceM": 70, "priceL": 70, "hot": true, "tags": ["口感究好", "推薦"], "desc": "錫蘭+伯爵+珍珠+鮮乳" },
+    { "brand": "樂台羽茶", "name": "犯規厚黑奶茶", "category": "奶茶", "priceM": 80, "priceL": 80, "hot": true, "tags": ["口感究好", "招牌"], "desc": "寶山黑糖+黑糖凍+醇厚双奶" },
+
+    { "brand": "樂台羽茶", "name": "老樹深焙烏龍", "category": "純茶", "priceM": 45, "priceL": 45, "hot": true, "tags": ["松柏嶺烏龍"], "desc": "手工炭焙茶，半發酵" },
+    { "brand": "樂台羽茶", "name": "老樹烏龍醇拿鐵", "category": "鮮奶", "priceM": 70, "priceL": 70, "hot": true, "tags": ["松柏嶺烏龍"], "desc": "+鮮乳" },
+
+    { "brand": "樂台羽茶", "name": "日本靜岡綠茶", "category": "純茶", "priceM": 35, "priceL": 35, "hot": true, "tags": ["日本靜岡綠", "推薦"], "desc": "純正煎茶，未發酵" },
+    { "brand": "樂台羽茶", "name": "梅好情人茶", "category": "水果茶", "priceM": null, "priceL": 50, "hot": false, "tags": ["日本靜岡綠"], "desc": "+檸檬+梅子" },
+    { "brand": "樂台羽茶", "name": "纖百香綠", "category": "水果茶", "priceM": null, "priceL": 50, "hot": false, "tags": ["日本靜岡綠"], "desc": "+百香果" },
+    { "brand": "樂台羽茶", "name": "纖葡萄柚綠", "category": "水果茶", "priceM": null, "priceL": 65, "hot": false, "tags": ["日本靜岡綠"] },
+    { "brand": "樂台羽茶", "name": "靜岡醇拿鐵", "category": "鮮奶", "priceM": 65, "priceL": 65, "hot": true, "tags": ["日本靜岡綠", "推薦"], "desc": "+鮮乳" },
+
+    { "brand": "樂台羽茶", "name": "穀早六味茶", "category": "純茶", "priceM": 40, "priceL": 40, "hot": true, "tags": ["穀袋良茶", "無咖啡因"], "desc": "六種健康穀物" },
+    { "brand": "樂台羽茶", "name": "桂花釀茶", "category": "純茶", "priceM": 40, "priceL": 40, "hot": false, "tags": ["穀袋良茶"], "desc": "煎茶+桂花" },
+    { "brand": "樂台羽茶", "name": "焙香糙米茶", "category": "純茶", "priceM": 40, "priceL": 40, "hot": false, "tags": ["穀袋良茶"], "desc": "煎茶+糙米" },
+    { "brand": "樂台羽茶", "name": "穀粒紫米茶", "category": "純茶", "priceM": 40, "priceL": 40, "hot": false, "tags": ["穀袋良茶"], "desc": "阿薩姆+紫米" },
+    { "brand": "樂台羽茶", "name": "日曬蕎麥綠", "category": "純茶", "priceM": 45, "priceL": 45, "hot": false, "tags": ["穀袋良茶"], "desc": "煎茶+蕎麥" },
+    { "brand": "樂台羽茶", "name": "輕盈薄荷綠", "category": "純茶", "priceM": 45, "priceL": 45, "hot": true, "tags": ["穀袋良茶"], "desc": "煎茶+薄荷葉+玫瑰" },
+
+    { "brand": "樂台羽茶", "name": "茶羽茶", "category": "特調", "priceM": null, "priceL": 40, "hot": false, "tags": ["茶羽茶系列"], "desc": "靜岡綠茶+阿薩姆" },
+    { "brand": "樂台羽茶", "name": "米羽茶", "category": "特調", "priceM": null, "priceL": 45, "hot": false, "tags": ["茶羽茶系列"], "desc": "靜岡綠茶+紫米" },
+    { "brand": "樂台羽茶", "name": "穀羽茶", "category": "特調", "priceM": null, "priceL": 45, "hot": false, "tags": ["茶羽茶系列"], "desc": "靜岡綠茶+六味茶" },
+    { "brand": "樂台羽茶", "name": "花羽茶", "category": "特調", "priceM": null, "priceL": 50, "hot": false, "tags": ["茶羽茶系列"], "desc": "靜岡綠茶+玫瑰+檸檬" },
+
+    { "brand": "樂台羽茶", "name": "玫瑰米糀", "category": "特調", "priceM": null, "priceL": 70, "hot": true, "tags": ["米糀甘茶", "推薦"], "desc": "玫瑰+檸檬+甘酒，60秒甘甘萃萃" },
+    { "brand": "樂台羽茶", "name": "米香米糀", "category": "特調", "priceM": null, "priceL": 70, "hot": false, "tags": ["米糀甘茶"], "desc": "煎茶+糙米+甘酒" },
+    { "brand": "樂台羽茶", "name": "貴妃米糀", "category": "特調", "priceM": null, "priceL": 75, "hot": true, "tags": ["米糀甘茶"], "desc": "荔枝+阿薩姆+甘酒" },
+    { "brand": "樂台羽茶", "name": "希旺米糀", "category": "特調", "priceM": null, "priceL": 75, "hot": false, "tags": ["米糀甘茶"], "desc": "鳳梨+不知春青茶+甘酒" }
   ]
 }
